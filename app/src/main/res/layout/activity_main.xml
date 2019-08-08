@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.yujongu.workoutrec.MainActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#03A9F4"
+            android:id="@+id/linDate">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aug 8"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relLayoutTime"
+            android:layout_below="@+id/linDate">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_toLeftOf="@+id/hyphen"
+                android:id="@+id/tvStartTime"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:id="@+id/hyphen"
+                android:layout_toLeftOf="@+id/tvEndTime"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvEndTime"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePickerFrame"
+            android:visibility="invisible"
+            android:elevation="30dp"
+            android:layout_below="@+id/relLayoutTime">
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:layout_alignParentRight="true"></TimePicker>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="확인"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:background="#E91E63"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/timePicker"
+                android:layout_marginTop="-50dp"
+                android:id="@+id/btnConfirmTime"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relLayoutTime">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부위"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:id="@+id/tvArea"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/tvArea">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="등"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="어깨"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="복근"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가슴"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="하체"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팔"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</layout>
